@@ -15,7 +15,7 @@ image.onclick = function()
 	{
 		myHeading.textContent = 'PROJECT ALPHA';
 		bodyy.setAttribute('bgcolor','#333333');
-		image.setAttribute('src','cod.jpg');
+		image.setAttribute('src','COD.jpg');
 		image.setAttribute('width','440'); 
 		title.textContent = 'PROJECT ALPHA';
 	}
