@@ -2,6 +2,12 @@ nav li a:hover
 {
   cursor: pointer;
 }
+.editor
+{
+	height: 550px;
+	width: 100%;
+}
+
 #output
 {
   width: 100%;
@@ -16,4 +22,20 @@ nav li a:hover
 {
 	background-color: #f8f9fa;
   cursor: pointer;
+}
+
+.potrait
+{
+  display: none;
+}
+@media screen and (max-width: 991px)
+{
+  .landscape
+  {
+    display: none;
+  }
+  .potrait
+  {
+    display: block;
+  }
 }
