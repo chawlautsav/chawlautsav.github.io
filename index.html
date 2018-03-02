@@ -7,15 +7,27 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+   
+   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
   <title>eSheets</title>
   <link rel="stylesheet" type="text/css" href="abc.css">
+  <link rel="icon" href="logo.png">
+  <style type="text/css">
+    #eSheets
+    {
+      font-family: 'Righteous', cursive;
+      font-size: 26px;
+    }
+  </style>
 </head>
 <body>
                                     <!--    NAVBAR START -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="http://codeshala.org/" target="new" data-placement="bottom"  data-toggle="popover" data-trigger="hover" data-content="eSheets is an online code editing platform, currently providing HTML,CSS and JavaScript support. Codeshala eSheets is developed by Utsav Chawla and Aarti Vishnoi, under the guidance of Vipin Khushu.">
-        <img src="codeshala_logo.png" style="width: 200px">
-        <label class="label label-primary"> eSheets </label>       
+        <img src="codeshala_logo.png" style="width: 200px;margin-top: -8px">
+        <pi id="eSheets"> eSheets    </pi>
+        <img src="logo.png" style="width:30px; margin-top: -12px">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -58,7 +70,10 @@
         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#code_css">CSS</a></li>
         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#code_js">JavaScript</a></li>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li class="nav-item  btn-success"><a  class="nav-link" id="go" onclick="doIt()"> GO </a> </li>
+        <li class="nav-item btn-success" ><a  class="nav-link" id="go" onclick="doIt()"> GO </a> </li>
+        <li class="nav-item ml-auto"><a class="nav-link" id="useflag" onclick="useflag()" data-toggle="tooltip" data-placement="bottom" title="Rollback to the last saved flag."></a></li>
+        <li class="nav-item btn-info"><a  class="nav-link" id="flag" onclick="flag()" data-toggle="tooltip" data-placement="bottom" title="Save Flag"> <i class="far fa-flag"></i></a></li>&nbsp;
+        
   </ul>
                                     <!--    EDITOR SELECTOR CLOSE -->
 

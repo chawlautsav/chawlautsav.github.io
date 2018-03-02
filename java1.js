@@ -20,6 +20,7 @@ $(document).ready(function()
     $("textarea").keyup(function(){
         doIt();
     });
+    $('[data-toggle="tooltip"]').tooltip();
 });
  function doIt() {
  	var x = document.getElementById("output"); 
@@ -38,5 +39,22 @@ $(document).ready(function()
 	newScript.type = "text/javascript";
 	newScript.innerHTML = eSheetsJS.getValue();
 	headID.appendChild(newScript); 
- } 
-function view(xsl) {var menu = document.getElementById('codeSelection'); var col3 = document.getElementById('col3'); var col9 = document.getElementById('col9'); if ( xsl == 1) {menu.setAttribute('class','nav nav-tabs bg-light justify-content-end '); col3.setAttribute('class','col-lg-3 order-2'); col9.setAttribute('class','col-lg-9 order-1'); } else if( xsl == 21) {menu.setAttribute('class','nav nav-tabs bg-light'); col3.setAttribute('class','col-lg-3 order-2'); col9.setAttribute('class','col-lg-9 order-12'); } }
+ }
+ var flagHTML,flagCSS,flagJS;
+ function flag()
+ {
+ 	document.getElementById('flag').innerHTML='<i class="fas fa-flag"></i>';
+ 	document.getElementById('useflag').innerHTML='<i class="fas fa-undo"></i>';
+
+ 	flagHTML = eSheetsHTML.getValue();
+ 	flagCSS = eSheetsCSS.getValue();
+ 	flagJS = eSheetsJS.getValue();
+ }
+ function useflag()
+ {
+ 	eSheetsHTML.session.setValue(flagHTML);
+ 	eSheetsCSS.session.setValue(flagCSS);
+ 	eSheetsJS.session.setValue(flagJS);
+ 	doIt();
+ }
+ function view(xsl) {var menu = document.getElementById('codeSelection'); var col3 = document.getElementById('col3'); var col9 = document.getElementById('col9'); if ( xsl == 1) {menu.setAttribute('class','nav nav-tabs bg-light justify-content-end '); col3.setAttribute('class','col-lg-3 order-2'); col9.setAttribute('class','col-lg-9 order-1'); } else if( xsl == 21) {menu.setAttribute('class','nav nav-tabs bg-light'); col3.setAttribute('class','col-lg-3 order-2'); col9.setAttribute('class','col-lg-9 order-12'); } }
