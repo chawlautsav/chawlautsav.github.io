@@ -1,15 +1,17 @@
 
 var eSheetsHTML = ace.edit("editor-HTML");
 	eSheetsHTML.getSession().setMode("ace/mode/html");
-	document.getElementById('editor-HTML').style.fontSize='15px';
+	document.getElementById('editor-HTML').style.fontSize='14px';
 	eSheetsHTML.session.setTabSize(3);
+	eSheetsHTML.setTheme('ace/theme/dreamweaver'); 
 var eSheetsCSS = ace.edit("editor-CSS");
 	eSheetsCSS.getSession().setMode("ace/mode/css");
-	document.getElementById('editor-CSS').style.fontSize='16px';
+	document.getElementById('editor-CSS').style.fontSize='15px';
+	eSheetsCSS.setTheme('ace/theme/sqlserver'); 
 	eSheetsCSS.session.setUseWrapMode(true);
 var eSheetsJS = ace.edit("editor-JS");
 	eSheetsJS.getSession().setMode("ace/mode/javascript");
-	eSheetsJS.session.setUseWrapMode(true);
+	eSheetsJS.setTheme('ace/theme/xcode'); 
 	document.getElementById('editor-JS').style.fontSize='14px';
 	eSheetsJS.session.setTabSize(2);
 $(document).ready(function()
